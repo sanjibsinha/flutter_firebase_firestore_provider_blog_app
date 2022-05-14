@@ -29,7 +29,7 @@ class BlogHomePage extends StatelessWidget {
               const SizedBox(height: 18),
               ConstrainedControllerCentre(
                 child: SelectableText(
-                  'A Girl\'s Blog',
+                  'Angel\'s Blog',
                   style: Theme.of(context).textTheme.headline1,
                 ),
               ),

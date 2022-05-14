@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'view/blog_web_app.dart';
 
-/// this is first branch where we have designed the blog page
+
+/// this is second branch
 ///
 
 void main() {
