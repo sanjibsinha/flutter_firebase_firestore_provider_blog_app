@@ -13,34 +13,34 @@ class BlogHomePage extends StatelessWidget {
       body: Align(
         alignment: Alignment.topCenter,
         child: Container(
-          width: 612,
+          width: 600,
           padding: const EdgeInsets.symmetric(horizontal: 18),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const ConstrainedControllerCentre(
                 child: CircleAvatar(
-                  radius: 72,
+                  radius: 70,
                   backgroundImage: NetworkImage(
-                    'https://i.ibb.co/ZKkSW4H/profile-image.png',
+                    'https://cdn.pixabay.com/photo/2018/03/24/00/36/girl-3255402_960_720.png',
                   ),
                 ),
               ),
               const SizedBox(height: 18),
               ConstrainedControllerCentre(
                 child: SelectableText(
-                  'Flutter Dev\'s blog',
+                  'A Girl\'s Blog',
                   style: Theme.of(context).textTheme.headline1,
                 ),
               ),
               const SizedBox(height: 40),
               SelectableText(
-                'Hello, I’m a human. I’m a Flutter developer and an avid human. Occasionally, I nap.',
+                'Hello, my name is Angel, and I want peace above all. What about you?',
                 style: Theme.of(context).textTheme.bodyText2,
               ),
               const SizedBox(height: 40),
               SelectableText(
-                'Blog',
+                'Angel',
                 style: Theme.of(context).textTheme.headline2,
               ),
               const BlogListTileClass(),

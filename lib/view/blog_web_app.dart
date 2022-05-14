@@ -5,15 +5,15 @@ import 'blog_home_page.dart';
 final theme = ThemeData(
   primarySwatch: Colors.blue,
   textTheme: const TextTheme(
-    bodyText2: TextStyle(fontSize: 22, height: 1.4),
-    caption: TextStyle(fontSize: 18, height: 1.4),
+    bodyText2: TextStyle(fontSize: 25, height: 1.4),
+    caption: TextStyle(fontSize: 20, height: 1.4),
     headline1: TextStyle(
-      fontSize: 45,
+      fontSize: 50,
       fontWeight: FontWeight.w800,
       color: Colors.black,
     ),
     headline2: TextStyle(
-      fontSize: 27,
+      fontSize: 30,
       fontWeight: FontWeight.w700,
       color: Colors.black,
     ),
@@ -31,7 +31,7 @@ class BlogWebApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Blog Web App',
+      title: 'A Girl\'s Blog',
       theme: theme,
       home: const BlogHomePage(),
     );

@@ -8,17 +8,17 @@ class BlogListTileClass extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         InkWell(
           child: Text(
-            'What is provider',
+            'How to get peace?',
             style: TextStyle(color: Colors.blueAccent.shade700),
           ),
           onTap: () {},
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         SelectableText(
-          'January 2, 2020',
+          'May 14, 2022',
           style: Theme.of(context).textTheme.caption,
         ),
       ],
