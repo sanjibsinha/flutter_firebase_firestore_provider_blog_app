@@ -7,6 +7,9 @@ class BlogPost {
 
   String get date => DateFormat('d MMMM y').format(publishedDate);
 
-  BlogPost(
-      {required this.title, required this.publishedDate, required this.body});
+  BlogPost({
+    required this.title,
+    required this.publishedDate,
+    required this.body,
+  });
 }

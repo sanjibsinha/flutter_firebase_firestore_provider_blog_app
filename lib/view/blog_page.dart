@@ -13,16 +13,16 @@ class BlogPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user = Provider.of<User>(context);
-    return BlogScaffold(
+    return BlogScaffoldingControl(
       children: [
         ConstrainedControllerCentre(
           child: Column(
             children: [
               CircleAvatar(
-                radius: 54,
+                radius: 60.0,
                 backgroundImage: NetworkImage(user.profilePicture),
               ),
-              const SizedBox(height: 18),
+              const SizedBox(height: 20.0),
               Text(
                 user.name,
                 style: Theme.of(context).textTheme.headline5,
@@ -30,19 +30,19 @@ class BlogPage extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 40),
+        const SizedBox(height: 40.0),
         SelectableText(
           post.title,
           style: Theme.of(context).textTheme.headline1!.copyWith(
-                fontSize: 36,
+                fontSize: 40.0,
               ),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 20.0),
         SelectableText(
           post.date,
           style: Theme.of(context).textTheme.caption,
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 20.0),
         SelectableText(post.body),
       ],
     );

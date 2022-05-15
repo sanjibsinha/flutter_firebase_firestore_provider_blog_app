@@ -14,29 +14,29 @@ class BlogHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final user = Provider.of<User>(context);
     final posts = Provider.of<List<BlogPost>>(context);
-    return BlogScaffold(
+    return BlogScaffoldingControl(
       children: [
         ConstrainedControllerCentre(
           child: CircleAvatar(
             backgroundImage: NetworkImage(user.profilePicture),
-            radius: 72,
+            radius: 70.0,
           ),
         ),
-        const SizedBox(height: 18),
+        const SizedBox(height: 20.0),
         ConstrainedControllerCentre(
           child: SelectableText(
             user.name,
             style: Theme.of(context).textTheme.headline1,
           ),
         ),
-        const SizedBox(height: 40),
+        const SizedBox(height: 40.0),
         SelectableText(
-          'Hello, I’m a human. I’m a Flutter developer and an avid human. Occasionally, I nap.',
+          'Hello, my name is Angel, and I want peace above all. What about you?',
           style: Theme.of(context).textTheme.bodyText2,
         ),
-        const SizedBox(height: 40),
+        const SizedBox(height: 40.0),
         SelectableText(
-          'Blog',
+          'I\'m Angel',
           style: Theme.of(context).textTheme.headline2,
         ),
         for (var post in posts) BlogListTileClass(post: post),

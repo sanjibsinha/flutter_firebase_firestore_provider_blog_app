@@ -38,14 +38,14 @@ class BlogWebApp extends StatelessWidget {
         Provider<List<BlogPost>>(create: (context) => _blogPosts),
         Provider<User>(
           create: (context) => User(
-            name: 'Flutter Dev',
+            name: 'Angel\'s Blog',
             profilePicture:
                 'https://cdn.pixabay.com/photo/2018/03/24/00/36/girl-3255402_960_720.png',
           ),
         ),
       ],
       child: MaterialApp(
-        title: 'A Girl\'s Blog',
+        title: 'Angel\'s Blog',
         theme: theme,
         home: const BlogHomePage(),
       ),
@@ -56,13 +56,13 @@ class BlogWebApp extends StatelessWidget {
 final _blogPosts = [
   BlogPost(
     title: 'What is provider?',
-    publishedDate: DateTime(2020, 1, 2),
+    publishedDate: DateTime(2022, 5, 15),
     body:
         'A wrapper around InheritedWidget to make them easier to use and more reusable.',
   ),
   BlogPost(
     title: 'What is multi-provider?',
-    publishedDate: DateTime(2020, 2, 3),
+    publishedDate: DateTime(2022, 5, 11),
     body:
         'A provider that merges multiple providers into a single linear widget tree. It is used to improve readability and reduce boilerplate code of having to nest multiple layers of providers.',
   ),

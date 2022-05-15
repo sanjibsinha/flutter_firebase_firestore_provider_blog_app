@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-class BlogScaffold extends StatelessWidget {
+class BlogScaffoldingControl extends StatelessWidget {
   final List<Widget> children;
 
-  const BlogScaffold({Key? key, required this.children}) : super(key: key);
+  const BlogScaffoldingControl({Key? key, required this.children})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
