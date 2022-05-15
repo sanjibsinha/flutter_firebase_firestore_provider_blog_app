@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../model/bog_post.dart';
+import 'blog_page.dart';
+
 class BlogListTileClass extends StatelessWidget {
-  const BlogListTileClass({Key? key}) : super(key: key);
+  const BlogListTileClass({Key? key, required this.post}) : super(key: key);
+  final BlogPost post;
 
   @override
   Widget build(BuildContext context) {
@@ -11,14 +15,20 @@ class BlogListTileClass extends StatelessWidget {
         const SizedBox(height: 20),
         InkWell(
           child: Text(
-            'How to get peace?',
+            post.title,
             style: TextStyle(color: Colors.blueAccent.shade700),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) {
+                return BlogPage(post: post);
+              },
+            ));
+          },
         ),
         const SizedBox(height: 10),
         SelectableText(
-          'May 14, 2022',
+          post.date,
           style: Theme.of(context).textTheme.caption,
         ),
       ],
