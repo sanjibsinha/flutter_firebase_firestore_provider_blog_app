@@ -58,10 +58,6 @@ class BlogHomePage extends StatelessWidget {
             ],
           ),
         ),
-        SelectableText(
-          '',
-          style: Theme.of(context).textTheme.bodyText2,
-        ),
         const SizedBox(height: 40),
         SelectableText(
           'Angel\'s Blog-Peace',
