@@ -31,10 +31,43 @@ class BlogHomePage extends StatelessWidget {
             style: Theme.of(context).textTheme.headline1,
           ),
         ),
+
+        const SizedBox(height: 40),
+        const SelectableText.rich(
+          TextSpan(
+            text: 'Hello', // default text style
+            children: <TextSpan>[
+              TextSpan(
+                text: ' beautiful ',
+                style: TextStyle(
+                  fontStyle: FontStyle.italic,
+                  color: Colors.red,
+                ),
+              ),
+              TextSpan(
+                text: 'world. ',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue,
+                ),
+              ),
+              TextSpan(
+                text: 'My name is Angel. I love peace. What about you?',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black38,
+                ),
+              ),
+            ],
+          ),
+        ),
+        
+
         const SizedBox(height: 40.0),
         SelectableText(
 
           'Hello, my name is Angel. I love peace. What about you?',
+
 
           style: Theme.of(context).textTheme.bodyText2,
         ),
