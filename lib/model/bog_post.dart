@@ -13,3 +13,16 @@ class BlogPost {
     required this.body,
   });
 }
+
+final blogPosts = [
+  BlogPost(
+    title: 'What is Peace?',
+    publishedDate: DateTime(2022, 5, 2),
+    body: 'A wrapper around our mental state that gives us stability.',
+  ),
+  BlogPost(
+    title: 'How to get Peace?',
+    publishedDate: DateTime(2022, 4, 3),
+    body: 'We need to avoid greed and be content with what we\'ve got.',
+  ),
+];

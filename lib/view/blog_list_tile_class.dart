@@ -4,7 +4,10 @@ import '../model/bog_post.dart';
 import 'blog_page.dart';
 
 class BlogListTileClass extends StatelessWidget {
-  const BlogListTileClass({Key? key, required this.post}) : super(key: key);
+  const BlogListTileClass({
+    Key? key,
+    required this.post,
+  }) : super(key: key);
   final BlogPost post;
 
   @override

@@ -9,7 +9,10 @@ import '../model/user.dart';
 class BlogPage extends StatelessWidget {
   final BlogPost post;
 
-  const BlogPage({Key? key, required this.post}) : super(key: key);
+  const BlogPage({
+    Key? key,
+    required this.post,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final user = Provider.of<User>(context);
@@ -19,10 +22,14 @@ class BlogPage extends StatelessWidget {
           child: Column(
             children: [
               CircleAvatar(
+
+              const SizedBox(height: 20),
+
                 radius: 60.0,
                 backgroundImage: NetworkImage(user.profilePicture),
               ),
               const SizedBox(height: 20.0),
+
               Text(
                 user.name,
                 style: Theme.of(context).textTheme.headline5,
@@ -37,12 +44,20 @@ class BlogPage extends StatelessWidget {
                 fontSize: 40.0,
               ),
         ),
-        const SizedBox(height: 20.0),
+
+        const SizedBox(
+          height: 20,
+        ),
+
         SelectableText(
           post.date,
           style: Theme.of(context).textTheme.caption,
         ),
-        const SizedBox(height: 20.0),
+
+        const SizedBox(
+          height: 20,
+        ),
+
         SelectableText(post.body),
       ],
     );

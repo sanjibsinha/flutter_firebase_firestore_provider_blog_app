@@ -19,10 +19,12 @@ class BlogHomePage extends StatelessWidget {
         ConstrainedControllerCentre(
           child: CircleAvatar(
             backgroundImage: NetworkImage(user.profilePicture),
+
             radius: 70.0,
           ),
         ),
         const SizedBox(height: 20.0),
+
         ConstrainedControllerCentre(
           child: SelectableText(
             user.name,
@@ -31,12 +33,16 @@ class BlogHomePage extends StatelessWidget {
         ),
         const SizedBox(height: 40.0),
         SelectableText(
-          'Hello, my name is Angel, and I want peace above all. What about you?',
+
+          'Hello, my name is Angel. I love peace. What about you?',
+
           style: Theme.of(context).textTheme.bodyText2,
         ),
         const SizedBox(height: 40.0),
         SelectableText(
-          'I\'m Angel',
+
+          'Angel\'s Blog-Peace',
+
           style: Theme.of(context).textTheme.headline2,
         ),
         for (var post in posts) BlogListTileClass(post: post),
