@@ -14,21 +14,24 @@ class BlogHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final user = Provider.of<User>(context);
     final posts = Provider.of<List<BlogPost>>(context);
-    return BlogScaffold(
+    return BlogScaffoldingControl(
       children: [
         ConstrainedControllerCentre(
           child: CircleAvatar(
             backgroundImage: NetworkImage(user.profilePicture),
-            radius: 75,
+
+            radius: 70.0,
           ),
         ),
-        const SizedBox(height: 22),
+        const SizedBox(height: 20.0),
+
         ConstrainedControllerCentre(
           child: SelectableText(
             user.name,
             style: Theme.of(context).textTheme.headline1,
           ),
         ),
+
         const SizedBox(height: 40),
         const SelectableText.rich(
           TextSpan(
@@ -58,13 +61,21 @@ class BlogHomePage extends StatelessWidget {
             ],
           ),
         ),
+        
+
+        const SizedBox(height: 40.0),
         SelectableText(
-          '',
+
+          'Hello, my name is Angel. I love peace. What about you?',
+
+
           style: Theme.of(context).textTheme.bodyText2,
         ),
-        const SizedBox(height: 40),
+        const SizedBox(height: 40.0),
         SelectableText(
+
           'Angel\'s Blog-Peace',
+
           style: Theme.of(context).textTheme.headline2,
         ),
         for (var post in posts) BlogListTileClass(post: post),
