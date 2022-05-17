@@ -19,19 +19,16 @@ class BlogHomePage extends StatelessWidget {
         ConstrainedControllerCentre(
           child: CircleAvatar(
             backgroundImage: NetworkImage(user.profilePicture),
-
             radius: 70.0,
           ),
         ),
         const SizedBox(height: 20.0),
-
         ConstrainedControllerCentre(
           child: SelectableText(
             user.name,
             style: Theme.of(context).textTheme.headline1,
           ),
         ),
-
         const SizedBox(height: 40),
         const SelectableText.rich(
           TextSpan(
@@ -61,13 +58,9 @@ class BlogHomePage extends StatelessWidget {
             ],
           ),
         ),
-
         const SizedBox(height: 40),
-
         SelectableText(
-
           'Angel\'s Blog-Peace',
-
           style: Theme.of(context).textTheme.headline2,
         ),
         for (var post in posts) BlogListTileClass(post: post),

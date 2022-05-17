@@ -22,14 +22,10 @@ class BlogPage extends StatelessWidget {
           child: Column(
             children: [
               CircleAvatar(
-
-              const SizedBox(height: 20),
-
-                radius: 60.0,
                 backgroundImage: NetworkImage(user.profilePicture),
+                radius: 70.0,
               ),
               const SizedBox(height: 20.0),
-
               Text(
                 user.name,
                 style: Theme.of(context).textTheme.headline5,
@@ -44,20 +40,16 @@ class BlogPage extends StatelessWidget {
                 fontSize: 40.0,
               ),
         ),
-
         const SizedBox(
           height: 20,
         ),
-
         SelectableText(
           post.date,
           style: Theme.of(context).textTheme.caption,
         ),
-
         const SizedBox(
           height: 20,
         ),
-
         SelectableText(post.body),
       ],
     );
