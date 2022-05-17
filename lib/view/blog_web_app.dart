@@ -24,15 +24,10 @@ class BlogWebApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-
         title: 'Angel\'s Blog',
-        theme: theme,
-
+        theme: CustomTheme.theme,
         home: const BlogHomePage(),
       ),
     );
   }
 }
-
-
-

@@ -17,7 +17,7 @@ class CustomTheme {
         color: Colors.black,
       ),
     ),
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       color: Colors.transparent,
       elevation: 0,
       iconTheme: IconThemeData(color: Colors.black),
