@@ -1,13 +1,27 @@
 import 'package:flutter/material.dart';
 
+import 'package:provider/provider.dart';
+
+import 'first_app.dart';
+
 class SecondApp extends StatelessWidget {
   const SecondApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final title = Provider.of<ClassTitle>(context);
+    final name = Provider.of<String>(context);
+    final age = Provider.of<int>(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Test'),
+        title: Text(
+          title.title,
+          style: const TextStyle(
+            color: Colors.black,
+            fontSize: 30.0,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       body: Center(
         child: Column(
@@ -28,7 +42,10 @@ class SecondApp extends StatelessWidget {
                     baseline: TextBaseline.alphabetic,
                     child: ConstrainedBox(
                       constraints: const BoxConstraints(maxWidth: 100),
-                      child: const TextField(),
+                      child: Text(
+                        name,
+                        style: Theme.of(context).textTheme.headline2,
+                      ),
                     ),
                   ),
                   const TextSpan(
@@ -38,14 +55,14 @@ class SecondApp extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 30.0,
+              height: 40.0,
             ),
             TextButton(
               onPressed: () {},
-              child: const Text(
-                'Submit',
-                style: TextStyle(
-                  fontSize: 20.0,
+              child: Text(
+                'Your age is $age',
+                style: const TextStyle(
+                  fontSize: 30.0,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                   backgroundColor: Colors.yellow,
