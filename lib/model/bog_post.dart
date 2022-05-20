@@ -14,7 +14,7 @@ class BlogPost {
     required this.body,
   });
 
-  factory BlogPost.fromDocument(DocumentSnapshot? doc) {
+  /* factory BlogPost.fromDocument(DocumentSnapshot? doc) {
     final map = doc!.data();
 
     return BlogPost(
@@ -22,7 +22,7 @@ class BlogPost {
       publishedDate: map['published_date'].toDate(),
       body: map['body'],
     );
-  }
+  } */
 
   Map<String, dynamic> toMap() {
     return {
