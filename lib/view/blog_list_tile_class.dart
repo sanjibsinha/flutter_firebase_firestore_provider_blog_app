@@ -18,7 +18,7 @@ class BlogListTileClass extends StatelessWidget {
         const SizedBox(height: 20),
         InkWell(
           child: Text(
-            post.title,
+            post.title!,
             style: TextStyle(color: Colors.blueAccent.shade700),
           ),
           onTap: () {
