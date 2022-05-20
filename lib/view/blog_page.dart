@@ -35,7 +35,7 @@ class BlogPage extends StatelessWidget {
         ),
         const SizedBox(height: 40.0),
         SelectableText(
-          post.title,
+          post.title!,
           style: Theme.of(context).textTheme.headline1!.copyWith(
                 fontSize: 40.0,
               ),
@@ -50,7 +50,7 @@ class BlogPage extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        SelectableText(post.body),
+        SelectableText(post.body!),
       ],
     );
   }
